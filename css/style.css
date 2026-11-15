@@ -1,6 +1,201 @@
+:root {
+    --dark-brown: #4B2E24;
+    --coffee: #79543A;
+    --caramel: #B9855A;
+    --beige: #DCC5A5;
+    --cream: #F5EFE5;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--dark-brown);
+    font-family: 'Georgia', serif;
+    margin: 0;
+    line-height: 1.7;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 22px;
+    background-color: var(--dark-brown);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 0 0 20px 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--caramel);
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1 {
+    color: var(--dark-brown);
+    font-size: 55px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin: 30px 0;
+}
+
+h2 {
+    color: var(--coffee);
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 25px 0;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--caramel);
+    opacity: 0.7;
+    margin: 30px 0;
+}
+
 ol {
-    background-image: url("img/polka dots.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--white);
+    border-left: 6px solid var(--caramel);
+    border-radius: 15px;
+    padding: 25px 25px 25px 55px;
+    margin: 30px auto;
+    max-width: 850px;
+    box-shadow: 0 5px 15px rgba(75,46,36,0.08);
+}
+
+ol li {
+    padding: 5px;
+    color: var(--coffee);
+}
+
+.container1,
+.container2,
+.container3 {
+    padding: 35px;
+    margin: 25px auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 22px;
+    border: 3px solid var(--beige);
+    box-shadow: 0 8px 20px rgba(75,46,36,0.15);
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(75,46,36,0.25);
+}
+
+.container1 img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.container2 img,
+.container3 img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+p {
+    color: var(--coffee);
+    line-height: 1.8;
+    padding: 15px;
+}
+
+button {
+    background-color: var(--coffee);
+    color: var(--white);
+    border: none;
+    border-radius: 30px;
+    padding: 13px 28px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--caramel);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 18px 10px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .container1,
+    .container2,
+    .container3 {
+        padding: 15px;
+    }
+
+    .container1 img {
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 18px !important;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#home, #about, #photos, #breeds {
+    scroll-margin-top: 30px;
 }
